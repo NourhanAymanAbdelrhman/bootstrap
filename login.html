@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    /> 
+     <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"> 
+<style>
+  .header_content{
+      
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 30px;
+
+  }
+  a{
+      text-decoration: none;
+      font-family: 'Lobster', cursive;
+  }
+  nav ul{
+      display: flex;
+      list-style: none;
+    
+  }
+  ul li a{
+      margin: 0 5px;
+  }
+  .f1{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%); 
+      width: 40%;
+      padding: 20px; 
+      background-color:#ffcdb2;
+  }
+  .f2{
+    position: absolute;
+      top: 90%;
+  }
+  form input{
+      display: block;
+      width: 100%;
+      margin: 5px 0;
+      border: 1px solid darksalmon;
+       outline: 0; 
+  }
+  h2{
+     font-family:'Lobster', cursive;
+     font-size: 30px;
+     color:lightcoral;
+  }
+  form input[type=submit]{
+     justify-self:center;    
+      text-align: center;
+      width:40%;
+      background-color: lightcoral;
+      font-family: 'Lobster', cursive;
+      color: lightcyan;
+  }
+  form input[type=submit]:hover{
+      opacity: 0.8;
+  }
+</style>
+<body class="bg-light">
+    
+    <headr>
+<div class="container-fluid bg-dark" >
+  <div class="row header_content">  
+        <a href="main2.html" class="text-light"> nourzbutey </a>
+    <nav>
+        <ul>
+          <li > <a href="#"class="text-light">sign in </a></li>
+          <li > <a href="#"class="text-light">sing up</a></li> 
+        </ul>
+    </nav>
+  </div>
+</div>
+    </headr>
+
+    <section class="f1">
+      <h2> login user</h2> 
+  
+       <form novalidate>
+          <input type="text" placeholder="enter your name" id="name">
+          
+          <input type="password" placeholder="enter your password" id="pass">
+          <input type="submit"  value="sign in" id="save" onclick="fun(event)" >
+         
+      </form> 
+      
+    </section>
+   
+    <script>   
+      function fun(e){
+       var username=document.getElementById("name").value;
+       var pass=document.getElementById("pass").value;
+       var user=localStorage.getItem("username");
+       var password=localStorage.getItem("pass");
+       var save=document.getElementById("save");
+      e.preventDefault();
+     
+      if(username==user&&pass==password){
+          window.location="main2.html";
+       }
+       else{
+           alert("username or password was wrong")
+       }
+    }
+     
+   </script> 
+
+   <script
+src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+crossorigin="anonymous"
+></script>
+<script
+src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+crossorigin="anonymous"
+></script>
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+crossorigin="anonymous"
+></script>  
+
+</body>
+</html>
